@@ -37,14 +37,3 @@ for i in range(len(lista) // 3):  # conto quanti gruppi da 3 ci sono
     # d contiene la chiave del dizionario costruito con Counter che conta le occorrenze
     print(a, b, c, d, e)
 print("Parte 2: ", f)
-
-
-# ho copiato da qui
-def dic(data):
-    return sum([alphabet.index(list((Counter(data[i * 3:i * 3 + 3][0]) &
-                                     Counter(data[i * 3:i * 3 + 3][1]) &
-                                     Counter(data[i * 3:i * 3 + 3][2])).keys())[0]) + 1
-                for i in range(len(data) // 3)])
-
-
-print("Parte 2 rubata: ", dic(lista))
